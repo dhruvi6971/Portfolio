@@ -1,0 +1,279 @@
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #333;
+    background-color: #fff;
+  }
+  
+  header {
+    background-color: #f8f8f8;
+    padding: 1em 2em;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav .logo {
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .hero {
+    padding: 4em 2em;
+    text-align: center;
+    background-color: #e0f7fa;
+  }
+  
+  .hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+  }
+  
+  .hero p {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+  }
+  
+  .services {
+    padding: 2em;
+    background-color: #f1f1f1;
+  }
+  
+  .services h2 {
+    text-align: center;
+  }
+  
+  .services ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    padding: 0;
+  }
+  
+  .case-studies {
+    padding: 2em;
+  }
+  
+  .case-studies h2 {
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  
+  .case-study {
+    margin-bottom: 1.5em;
+  }
+  
+  .case-study h3 {
+    margin: 0.5em 0;
+  }
+  
+  footer {
+    background-color: #f8f8f8;
+    text-align: center;
+    padding: 1em;
+    font-size: 0.9em;
+  }
+  .case-studies {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .case-studies h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .case-study-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-areas:
+      "one two"
+      "three three";
+    gap: 2rem;
+  }
+  
+  .case-study:nth-child(1) {
+    grid-area: one;
+  }
+  .case-study:nth-child(2) {
+    grid-area: two;
+  }
+  .case-study.large {
+    grid-area: three;
+  }
+  
+  .case-study {
+    background: #f9f9f9;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+  }
+  
+  .case-study:hover {
+    transform: translateY(-5px);
+  }
+  
+  .case-study img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  
+  .case-study h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .case-study a p {
+    color: #0077cc;
+    font-weight: bold;
+    margin-top: 0.5rem;
+  }
+/* Overall layout */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background: #fefefe;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container, .content {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  animation: fadeIn 1s ease-in;
+}
+
+/* Headings */
+h1, h2 {
+  color: #2b2b2b;
+  margin-top: 2rem;
+  position: relative;
+}
+h1::after, h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #007acc;
+  margin-top: 6px;
+}
+
+/* Paragraphs and Lists */
+p, li {
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+}
+ul {
+  padding-left: 1.5rem;
+}
+em {
+  font-style: italic;
+  color: #007acc;
+}
+
+/* Timeline */
+.timeline {
+  border-left: 3px solid #007acc;
+  margin: 2rem 0;
+  padding-left: 1rem;
+  position: relative;
+}
+.event {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+.event::before {
+  content: '';
+  position: absolute;
+  left: -11px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  background: #007acc;
+  border-radius: 50%;
+}
+.event .year {
+  font-weight: bold;
+  color: #444;
+  margin-right: 10px;
+  display: inline-block;
+  min-width: 80px;
+}
+
+/* Links */
+a {
+  color: #007acc;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {opacity: 0; transform: translateY(10px);}
+  100% {opacity: 1; transform: translateY(0);}
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container, .content {
+    padding: 1rem;
+  }
+
+  .timeline {
+    padding-left: 0.5rem;
+  }
+}
+.profile-image-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  align-items: left;
+}
+
+.profile-image {
+  width: 250px;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  position: relative;
+  align-self: left;
+}
+
+.profile-image:hover {
+  transform: scale(1.03);
+}
+
+  
